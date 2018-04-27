@@ -7,6 +7,6 @@ ADD target/docker-eureka-server-0.0.1-SNAPSHOT.jar /app.jar
 #更改/app.jar的访问时间
 RUN bash -c 'touch /app.jar'
 #指定容器需要映射到宿主机器的端口
-EXPOSE 8081
+EXPOSE 8761
 #容器时启动时执行此命令
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
